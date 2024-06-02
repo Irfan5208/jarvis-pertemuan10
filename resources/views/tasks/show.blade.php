@@ -15,10 +15,10 @@
         Detail Tugas
     </div>
     <div class="card-body">
-        <h4>{{ $task['name'] }}</h4>
-        <p><strong>Deadline:</strong> {{ \Carbon\Carbon::parse($task['deadline'])->format('d F Y') }}</p>
-        <p><strong>Status:</strong> <span class="badge bg-warning">{{ $task['status'] }}</span></p>
-        <p><strong>Deskripsi:</strong> {{ $task['description'] }}</p>
+        <h4>{{ $task->name }}</h4>
+        <p><strong>Deadline:</strong> {{ \Carbon\Carbon::parse($task->deadline)->format('d F Y') }}</p>
+        <p><strong>Status:</strong> <span class="badge bg-warning">{{ $task->status }}</span></p>
+        <p><strong>Deskripsi:</strong> {{ $task->description }}</p>
         <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Kembali</a>
     </div>
 </div>
