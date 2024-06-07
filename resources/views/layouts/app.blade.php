@@ -27,6 +27,20 @@
         </div>
     </div>
 
+
+    <!-- Contoh navigasi -->
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('tasks.index') }}">Tasks</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
+    </li>
+</ul>
+
     <!-- Bootstrap core JavaScript-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

@@ -9,13 +9,20 @@ class Task extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'deadline',
-        'status',
-        'description',
-    ];
+    protected $fillable = ['name', 'description', 'deadline', 'status_id', 'categories_id'];
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
+
+
 
 
     // mendefinisikan data tugas

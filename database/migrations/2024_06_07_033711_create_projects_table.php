@@ -8,19 +8,20 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('task', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->date('deadline');
             $table->foreignId('status_id')->constrained('status');
             $table->foreignId('categories_id')->constrained('categories');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('task');
+        Schema::dropIfExists('projects');
     }
 };
